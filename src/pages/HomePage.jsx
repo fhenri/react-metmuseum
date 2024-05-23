@@ -16,7 +16,6 @@ function Home() {
     const [results, setResults] = useState([]);
 
     useEffect(() => {
-        console.log("call to fetch department data");
         fetch(departmentsAPI)
             .then((response) => response.json())
             .then((data) => setDpts(data.departments))

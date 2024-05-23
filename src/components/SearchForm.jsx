@@ -27,7 +27,7 @@ function SearchForm ( props ) {
         fetch(getSearchURL(departmentId, query))
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            //console.log(data);
             setResults(data.objectIDs);
             //setResults([...data.objectIDs]);  // Spread into a new array
         })
