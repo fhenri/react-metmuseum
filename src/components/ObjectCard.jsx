@@ -19,7 +19,7 @@ function ObjectCard (props) {
     
     return (
         mObject && (
-        <div className="block mr-4 my-2 p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 w-[calc(100%/5-4px)]">
+        <div className="block flex flex-col mx-2 my-2 p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <ObjectImage mObject={mObject} />
             <h3 className='mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
                 <div dangerouslySetInnerHTML={{ __html: mObject.title }} />
@@ -27,6 +27,7 @@ function ObjectCard (props) {
             { mObject.artistDisplayName && <h5 className='mb-2 tracking-tight text-gray-900 dark:text-white'>
                 by {mObject.artistDisplayName}
             </h5> }
+            <div className='h-full'></div>
             <Link to={`/object/${objectId}`} state={ mObject } className='inline-flex font-medium text-blue-600 hover:underline text-end'>
                 View Object Details
                 <svg className="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">

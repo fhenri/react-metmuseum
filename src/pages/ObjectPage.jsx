@@ -38,9 +38,9 @@ function ObjectItem () {
             </h2>
             { state.artistNationality && <span>, {state.artistNationality}</span> }
             { state.objectDate && <div>{state.objectDate}</div> }
-            { state.objectWikidata_URL && <a href={state.objectWikidata_URL}>
+            { state.objectWikidata_URL && <div><a href={state.objectWikidata_URL}>
               Learn more about the object<span className='text-red-600'> on wikidata</span>
-              </a> }
+              </a></div> }
           </div>
           <div className='text-end'>
               { state.primaryImage ? 
