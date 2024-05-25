@@ -29,17 +29,34 @@ function ObjectPage () {
     // TODO if state empty fetch from API
     useEffect(() => {
       console.log("use effect");
+      console.log(location.state);
 
-      console.log("fetch from API");
+      if (!location.state) {
+        console.log("fetch from API");
         fetch(`${objectAPI}/${objectId}`)
         .then((response) => response.json())
         .then((data) => setMObject(data))
         .catch(error => {
             console.error('Error fetching object:', error);
         })
+      }
+      window.scrollTo(0, 0);
+    }, [location, objectId]);
 
-        window.scrollTo(0, 0);
-    }, [objectId]);
+    /*
+    if (!state) {
+      console.log("fetch from API");
+      fetch(`${objectAPI}/${objectId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setMObject(data);
+      })
+      .catch(error => {
+          console.error('Error fetching object:', error);
+      })
+      console.log(mObject);
+    }
+    */
 
     return (
       <>
