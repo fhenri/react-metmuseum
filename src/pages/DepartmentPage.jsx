@@ -1,7 +1,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import { useParams, useLocation } from "react-router-dom";
 
-import ObjectList from '../components/ObjectList';
+import ObjectResult from '../components/ObjectResult';
 import SearchForm from '../components/SearchForm';
 import PageTitle from '../components/PageTitle';
 import ErrorMessage from '../components/ErrorMessage';
@@ -42,11 +42,7 @@ function DepartmentPage() {
         subMessage={errorMessage}/>)
     }
 
-    return (
-      <Suspense fallback={<div>Loading Elements ...</div>}>
-        <ObjectList objectList={results} />
-      </Suspense>
-    );
+    return (<ObjectResult objectList={results} />);
   }
 
   return (

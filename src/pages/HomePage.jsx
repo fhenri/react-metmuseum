@@ -1,10 +1,10 @@
 import { useEffect, useState, Suspense } from 'react';
 
 import DepartmentList from '../components/DepartmentList';
-import ObjectList from '../components/ObjectList';
 import SearchForm from '../components/SearchForm';
 import PageTitle from '../components/PageTitle';
 import ErrorMessage from '../components/ErrorMessage';
+import ObjectResult from '../components/ObjectResult';
 
 function Home() {
     const departmentsAPI = "https://collectionapi.metmuseum.org/public/collection/v1/departments";
@@ -26,7 +26,7 @@ function Home() {
 
     function renderResults (results, dpts) {
         if (results && results.length > 0) {
-            return (<ObjectList objectList={results} />);
+            return (<ObjectResult objectList={results} />);
         } else {
             return (<DepartmentList departmentList={dpts} />);
         }
@@ -43,10 +43,7 @@ function Home() {
                 <ErrorMessage 
                     mainMessage="Sorry, the museum is closed" 
                     subMessage={errorMessage}/>
-                : <Suspense fallback={<div>Loading Elements ...</div>}>
-                    { renderResults(results, dpts) }
-                  </Suspense>
-              
+                : renderResults(results, dpts)
             }        
         </>
     )

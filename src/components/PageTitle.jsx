@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import MuseumLogo from './M-full-01.svg';
+import MuseumLogo from './logo.svg';
 
 export default function PageTitle ( props ) {
     const title = props.title;
