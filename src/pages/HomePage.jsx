@@ -15,13 +15,22 @@ function Home() {
     const [results, setResults] = useState([]);
 
     useEffect(() => {
-        fetch(departmentsAPI)
+        const cachedData = sessionStorage.getItem('departmentsData');
+
+        if (cachedData) {
+            setDpts(JSON.parse(cachedData));
+        } else {
+            fetch(departmentsAPI)
             .then((response) => response.json())
-            .then((data) => setDpts(data.departments))
+            .then((data) => {
+                setDpts(data.departments);
+                sessionStorage.setItem('departmentsData', JSON.stringify(data.departments));
+            })
             .catch(error => {
                 setErrorMessage('we cannot get the gallery data');
                 console.error('Error fetching departments:', error);
             })
+        }
     }, []);
 
     function renderResults (results, dpts) {
