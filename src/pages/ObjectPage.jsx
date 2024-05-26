@@ -48,7 +48,7 @@ function ObjectPage () {
 <div>
 <button type="button" className="absolute top-0 start-0 z-30 bg-white flex items-center justify-center h-full px-4 cursor-pointer" onClick={ () => navigate(`/object/${objectId-1}`)}>
     <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-        <svg className="w-4 h-4 text-black dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <svg className="w-4 h-4 text-red-met dark:text-red-met rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
         </svg>
         <span className="sr-only">Previous</span>
@@ -56,7 +56,7 @@ function ObjectPage () {
 </button>
 <button type="button" className="absolute top-0 end-0 z-30 bg-white flex items-center justify-center h-full px-4 cursor-pointer" onClick={() => navigate(`/object/${parseInt(objectId)+1}`)}>
     <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-        <svg className="w-4 h-4 text-black dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <svg className="w-4 h-4 text-red-met dark:text-red-met rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
         </svg>
         <span className="sr-only">Next</span>
@@ -76,7 +76,7 @@ function ObjectPage () {
               { mObject.artistNationality && <span>, {mObject.artistNationality}</span> }
               { mObject.objectDate && <div>{mObject.objectDate}</div> }
               { mObject.objectWikidata_URL && <div><a href={mObject.objectWikidata_URL}>
-                Learn more about the object<span className='text-red-600'> on wikidata</span>
+                Learn more about the object<span className='text-red-met'> on wikidata</span>
                 </a></div> }
             </div>
             <div className='text-end'>
@@ -87,7 +87,7 @@ function ObjectPage () {
                   : mObject.primaryImageSmall && <img className="h-auto max-w-lg rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
                 }
                 <a href={mObject.objectURL}>
-                  <span className='text-end w-full'>See the object on the <span className='text-red-600'>met museum</span> website</span>
+                  <span className='text-end w-full'>See the object on the <span className='text-red-met'>met museum</span> website</span>
                 </a>
             </div>
           </div>

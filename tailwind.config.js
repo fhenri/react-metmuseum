@@ -8,7 +8,12 @@ export default {
     fontFamily: {
       'montserrat': ['montserrat', 'system-ui']
     },
-    extend: {},
+    extend: {
+      // Add new colors 
+      colors: { 
+        'red-met': '#e4002b',
+      },
+    },
   },
   plugins: [],
 }
