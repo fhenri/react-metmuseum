@@ -1,4 +1,4 @@
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState } from 'react';
 
 import DepartmentList from '../components/DepartmentList';
 import SearchForm from '../components/SearchForm';

@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, useLocation } from "react-router-dom";
 
 import ObjectResult from '../components/ObjectResult';
@@ -14,6 +14,7 @@ function DepartmentPage() {
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [results, setResults] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   /*
   The idea was to randomize the array so we dont display always object in same order; but performance are just horrible
@@ -26,9 +27,13 @@ function DepartmentPage() {
   */
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(`${dptObjectAPI}=${departmentId}`)
         .then((response) => response.json())
-        .then((data) => setResults(data.objectIDs))
+        .then((data) => {
+          setResults(data.objectIDs)
+          setIsLoading(false);
+        })
         .catch(error => {
             setErrorMessage('we cannot get the gallery data');
             console.error('Error fetching gallery object:', error);
@@ -36,13 +41,24 @@ function DepartmentPage() {
   }, [departmentId]);
 
   function renderResults (results) {
-    if (errorMessage) {
+    if (errorMessage || (!isLoading && results.length == 0)) {
       return (<ErrorMessage 
         mainMessage="Sorry, the gallery is closed" 
         subMessage={errorMessage}/>)
     }
 
-    return (<ObjectResult objectList={results} />);
+    if (isLoading) {
+      return (
+        <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        role="status">
+          <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
+        </div>
+      );
+    }
+
+    return (
+        <ObjectResult objectList={results} />
+    );
   }
 
   return (
