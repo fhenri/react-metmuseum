@@ -144,7 +144,7 @@ function renderCarousel(mObject) {
       { mObject.primaryImage ?
         <div className="carousel-item">
           <a href={mObject.primaryImage}>
-            <img className="object-cover h-48 w-72 md:h-96 cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+            <img className="object-cover h-48 w-72 md:h-auto md:w-full cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
           </a> 
         </div> 
         : mObject.primaryImageSmall && <div className="carousel-item">
@@ -163,9 +163,9 @@ function renderCarousel(mObject) {
     : 
       mObject.primaryImage ?
       <a href={mObject.primaryImage}>
-        <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+        <img className="md:text-end md:h-auto md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
       </a>
-      : mObject.primaryImageSmall && <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+      : mObject.primaryImageSmall && <img className="md:text-end md:h-auto md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
     }
     </>)
 }
