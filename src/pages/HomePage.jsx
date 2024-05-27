@@ -43,7 +43,7 @@ function Home() {
     
     return (
         <>
-            <div className="sticky top-0 bg-white py-4">
+            <div className="sticky top-0 bg-white dark:bg-black py-4">
                 <PageTitle title="Welcome to <span class='text-red-met'>The Met Museum</span> Virtual Tour" />
                 <SearchForm allDepartments={true} setResults={setResults} placeholder="Search in museum..." setErrorMessage={setErrorMessage}/>
             </div>

@@ -39,9 +39,9 @@ function DepartmentCard(props) {
       }, [dpt, searchWord]);
     
     return (
-        <div className="block flex flex-col max-w-sm m-2 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 basis-1/3">
+        <div className="block flex flex-col max-w-sm m-2 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 basis-full sm:basis-1/2 md:basis-1/3">
             <ObjectImage mObject={mObject} />
-            <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+            <h5 className='mb-2 text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                 <div dangerouslySetInnerHTML={{ __html: dpt.displayName }} />
             </h5>
             <div className='h-full'></div>

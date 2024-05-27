@@ -63,7 +63,7 @@ function DepartmentPage() {
 
   return (
     <>
-      <div className="sticky top-0 bg-white py-4">
+      <div className="sticky top-0 bg-white dark:bg-black py-4">
         <PageTitle title={`Welcome to the <span class='text-red-met'>${state ? state : ''}</span> Virtual Gallery`} />
         <SearchForm allDepartments={false} setResults={setResults} setErrorMessage={setErrorMessage} placeholder="Search in gallery..."/>
       </div>
