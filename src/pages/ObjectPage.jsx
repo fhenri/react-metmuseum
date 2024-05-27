@@ -72,16 +72,12 @@ function ObjectPage () {
                 </a></div> }
             </div>
             <div className='text-left md:text-end md:grow'>
-                { mObject.primaryImage ? 
-                  <a href={mObject.primaryImage}>
-                    <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
-                  </a> 
-                  : mObject.primaryImageSmall && <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
-                }
+                {renderCarousel(mObject)}
+
                 <a href={mObject.objectURL}>
                   <span className='text-left md:text-end md:w-full'>See the object on the <span className='text-red-met'>met museum</span> website</span>
                 </a>
-            </div>
+              </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-[180px_800px] md:gap-x-8">
@@ -138,6 +134,44 @@ function ObjectPage () {
         </>
       )
     }
+}
+
+function renderCarousel(mObject) {
+
+  return (<>
+    { mObject.additionalImages && mObject.additionalImages.length > 0 ?
+      <div className="carousel rounded-box md:h-auto md:text-end md:w-full">
+      { mObject.primaryImage ?
+        <div className="carousel-item">
+          <a href={mObject.primaryImage}>
+            <img className="object-cover h-48 w-72 md:h-96 cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+          </a> 
+        </div> 
+        : mObject.primaryImageSmall && <div className="carousel-item">
+          <img className="md:text-end md:h-96 object-cover h-48 w-72 cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+        </div>
+      }
+      {
+        mObject.additionalImages.map(image => (
+          <div className="carousel-item" key={image}>
+            <a href={image}>
+              <img src={image} className="object-cover md:h-96 h-48" alt="additional images" />
+            </a>
+          </div>))
+      }
+      </div>
+    : 
+      mObject.primaryImage ?
+      <a href={mObject.primaryImage}>
+        <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+      </a>
+      : mObject.primaryImageSmall && <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+    }
+    </>)
+}
+
+function openFullscreen  () {
+  document.getElementById('image')?.requestFullscreen()
 }
 
 export default ObjectPage;
