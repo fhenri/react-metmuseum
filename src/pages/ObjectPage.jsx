@@ -36,7 +36,7 @@ function ObjectPage () {
 <div className="sticky absolute top-0 end-0 bg-white flex items-center flew-wrap dark:bg-black py-4">
 
 <button type="button" className="bg-white dark:bg-black flex items-center justify-center w-10 h-10 px-4 cursor-pointer" onClick={ () => navigate(`/object/${objectId-1}`)}>
-    <span className="inline-flex items-center justify-center rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+    <span className="inline-flex items-center justify-center rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
         <svg className="w-4 h-4 text-red-met dark:text-red-met rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
         </svg>
@@ -47,7 +47,7 @@ function ObjectPage () {
 <PageTitle title={`${mObject ? mObject.title : ''}`} />
 
 <button type="button" className="bg-white dark:bg-black flex items-center justify-center w-10 h-10 px-4 cursor-pointer" onClick={ () => navigate(`/object/${parseInt(objectId)+1}`)}>
-    <span className="inline-flex items-center justify-center rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+    <span className="inline-flex items-center justify-center rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
         <svg className="w-4 h-4 text-red-met dark:text-red-met rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
         </svg>
@@ -71,12 +71,12 @@ function ObjectPage () {
                 Learn more about the object<span className='text-red-met'> on wikidata</span>
                 </a></div> }
             </div>
-            <div className='text-left md:text-end'>
+            <div className='text-left md:text-end md:grow'>
                 { mObject.primaryImage ? 
                   <a href={mObject.primaryImage}>
-                    <img className="md:h-auto md:max-w-lg rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+                    <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
                   </a> 
-                  : mObject.primaryImageSmall && <img className="md:h-auto md:max-w-lg rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+                  : mObject.primaryImageSmall && <img className="md:h-auto md:text-end md:w-full rounded-lg cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
                 }
                 <a href={mObject.objectURL}>
                   <span className='text-left md:text-end md:w-full'>See the object on the <span className='text-red-met'>met museum</span> website</span>
