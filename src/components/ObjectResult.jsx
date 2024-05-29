@@ -12,8 +12,8 @@ function ObjectResult (props) {
     return (
         results && <Suspense fallback={<div>Loading Elements ...</div>}>
             <ObjectList objectList={results.slice(0, nbItems)} />
-            { showMore && <button  className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onClick={() => setNbItems(nbItems + 20)}>
-            Show More
+            { showMore && <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 mx-2 md:mx-0 border border-gray-400 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 rounded shadow" onClick={() => setNbItems(nbItems + 20)}>
+                <span className='dark:text-white'>Show More</span>
             </button> }
         </Suspense>
         )

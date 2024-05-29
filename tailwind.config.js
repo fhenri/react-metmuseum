@@ -12,6 +12,7 @@ export default {
       // Add new colors 
       colors: { 
         'red-met': '#e4002b',
+        'dark-bgcolor': '#242424',
       },
     },
   },

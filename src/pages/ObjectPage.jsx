@@ -33,9 +33,9 @@ function ObjectPage () {
     function renderObjectDetails (mObject) {
       return (
         <>
-<div className="sticky absolute top-0 end-0 bg-white flex items-center flew-wrap dark:bg-black py-4">
+<nav className="sticky absolute top-0 end-0 bg-white dark:bg-dark-bgcolor flex items-center flew-wrap py-4">
 
-<button type="button" className="bg-white dark:bg-black flex items-center justify-center w-10 h-10 px-4 cursor-pointer" onClick={ () => navigate(`/object/${objectId-1}`)}>
+<button type="button" className="bg-inherit flex items-center justify-center w-10 h-10 px-4 cursor-pointer" onClick={ () => navigate(`/object/${objectId-1}`)}>
     <span className="inline-flex items-center justify-center rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
         <svg className="w-4 h-4 text-red-met dark:text-red-met rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
@@ -46,7 +46,7 @@ function ObjectPage () {
 
 <PageTitle title={`${mObject ? mObject.title : ''}`} />
 
-<button type="button" className="bg-white dark:bg-black flex items-center justify-center w-10 h-10 px-4 cursor-pointer" onClick={ () => navigate(`/object/${parseInt(objectId)+1}`)}>
+<button type="button" className="bg-inherit flex items-center justify-center w-10 h-10 px-4 cursor-pointer" onClick={ () => navigate(`/object/${parseInt(objectId)+1}`)}>
     <span className="inline-flex items-center justify-center rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
         <svg className="w-4 h-4 text-red-met dark:text-red-met rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
@@ -54,12 +54,12 @@ function ObjectPage () {
         <span className="sr-only">Next</span>
     </span>
 </button>
-</div>
+</nav>
 
 
           <div className='flex flex-col pb-8 md:flex-row space-y-12 md:space-x-24'>
             <div className='text-left pt-12'>
-              <h2 className='text-2xl font-bold my-2 text-left inline'>
+              <h2 className='text-2xl font-bold my-2 text-left inline dark:text-white'>
                 {mObject.artistWikidata_URL ? 
                   <a href={mObject.artistWikidata_URL}>{mObject.artistDisplayName}</a>
                   : mObject.artistDisplayName
@@ -148,7 +148,7 @@ function renderCarousel(mObject) {
           </a> 
         </div> 
         : mObject.primaryImageSmall && <div className="carousel-item">
-          <img className="md:text-end md:h-96 object-cover h-48 w-72 cursor-pointer" src={mObject.primaryImageSmall} alt={mObject.title} />
+          <img className="md:text-end md:h-96 object-cover h-48 w-72 cursor-pointer" loading="lazy" src={mObject.primaryImageSmall} alt={mObject.title} />
         </div>
       }
       {
