@@ -5,6 +5,14 @@ This is a sample [React](https://react.dev/) app against [The Metropolitan Museu
 ![Mobile version in dark mode](./github-img/mobile-dark.png)
 <a href="./github-img/mobile-dark.png"><img src="./github-img/mobile-dark.png" align="left" width="50%" ></a>
 
+
+<figure class="image">
+  <img src="./github-img/desktop.png" width="50%" alt="Desktop version - search">
+  <figcaption>Desktop version - search</figcaption>
+</figure>
+
+<a href="./github-img/desktop.png"><img src="./github-img/desktop.png" align="right" width="50%" alt="Desktop version - search"></a>
+
 {% include image.html url="github-img/mobile-dark.png" width="50%" description="Mobile version in dark mode" %}
 {% include image.html url="github-img/desktop.png" width="50%" description="Desktop version - search" %}
 
