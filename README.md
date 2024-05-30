@@ -3,6 +3,7 @@
 This is a sample [React](https://react.dev/) app against [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/) enabling navigation, browsing and searching the different gallery and object.
 
 ![Mobile version in dark mode](./github-img/mobile-dark.png)
+<a href="./github-img/mobile-dark.png"><img src="./github-img/mobile-dark.png" align="left" width="50%" ></a>
 
 {% include image.html url="github-img/mobile-dark.png" width="50%" description="Mobile version in dark mode" %}
 {% include image.html url="github-img/desktop.png" width="50%" description="Desktop version - search" %}
