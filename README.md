@@ -2,19 +2,18 @@
 
 This is a sample [React](https://react.dev/) app against [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/) enabling navigation, browsing and searching the different gallery and object.
 
-![Mobile version in dark mode](./github-img/mobile-dark.png)
-<a href="./github-img/mobile-dark.png"><img src="./github-img/mobile-dark.png" align="left" width="50%" ></a>
-
+<p>
+<figure class="image">
+  <img src="./github-img/mobile-dark.png" width="50%" alt="Mobile version in dark mode">
+  <figcaption>Mobile version in dark mode</figcaption>
+</figure>
 
 <figure class="image">
   <img src="./github-img/desktop.png" width="50%" alt="Desktop version - search">
   <figcaption>Desktop version - search</figcaption>
 </figure>
+</p>
 
-<a href="./github-img/desktop.png"><img src="./github-img/desktop.png" align="right" width="50%" alt="Desktop version - search"></a>
-
-{% include image.html url="github-img/mobile-dark.png" width="50%" description="Mobile version in dark mode" %}
-{% include image.html url="github-img/desktop.png" width="50%" description="Desktop version - search" %}
 
 ### Features
 When the application first renders, it will list all available gallery and will render for each gallery a random image from this gallery (we run search for objects including pictures but the API might return an object without picture so no pic is displayed in this case).
