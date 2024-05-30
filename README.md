@@ -2,17 +2,15 @@
 
 This is a sample [React](https://react.dev/) app against [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/) enabling navigation, browsing and searching the different gallery and object.
 
-<p>
-<figure class="image">
+<figure align="left" class="image">
   <img src="./github-img/mobile-dark.png" width="50%" alt="Mobile version in dark mode">
   <figcaption>Mobile version in dark mode</figcaption>
 </figure>
 
-<figure class="image">
+<figure align="right" class="image">
   <img src="./github-img/desktop.png" width="50%" alt="Desktop version - search">
   <figcaption>Desktop version - search</figcaption>
 </figure>
-</p>
 
 
 ### Features
