@@ -4,7 +4,7 @@ This is a sample [React](https://react.dev/) app against [The Metropolitan Museu
 
 Mobile version in dark mode                                                              |  Desktop version - search
 :---------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:
-<img src="./github-img/mobile-dark.png" width="50%" alt="Mobile version in dark mode">   | <img src="./github-img/desktop.png" width="50%" alt="Desktop version - search">
+<img src="./github-img/mobile-dark.png" width="100%" alt="Mobile version in dark mode">   | <img src="./github-img/desktop.png" width="100%" alt="Desktop version - search">
 
 
 ### Features
