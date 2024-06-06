@@ -20,10 +20,10 @@ function ObjectCard (props) {
     return (
         mObject && (
         <div className="block flex flex-col mx-2 my-2 p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <ObjectImage mObject={mObject} />
             <h3 className='mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
                 <div dangerouslySetInnerHTML={{ __html: mObject.title }} />
             </h3>
+            <ObjectImage mObject={mObject} />
             { mObject.artistDisplayName && <h5 className='mb-2 tracking-tight text-gray-900 dark:text-white'>
                 by {mObject.artistDisplayName}
             </h5> }
