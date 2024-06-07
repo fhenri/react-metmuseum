@@ -7,8 +7,9 @@
   "homepage": "https://fhenri.github.io/react-metmuseum",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "BASE_DIRECTORY='/react-metmuseum' vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "cloudflare": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
