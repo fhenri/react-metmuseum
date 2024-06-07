@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useLocation, useNavigate, Link } from "react-router-dom";
 
 import PageTitle from '../components/PageTitle';
+import NavBottom from '../components/NavBottom';
 
 function ObjectPage () {
     const objectAPI = "https://collectionapi.metmuseum.org/public/collection/v1/objects";
@@ -131,6 +132,7 @@ function ObjectPage () {
             </div>
           </div>
 
+          <NavBottom />
         </>
       )
     }

@@ -5,6 +5,7 @@ import ObjectResult from '../components/ObjectResult';
 import SearchForm from '../components/SearchForm';
 import PageTitle from '../components/PageTitle';
 import ErrorMessage from '../components/ErrorMessage';
+import NavBottom from '../components/NavBottom';
 
 function DepartmentPage() {
   const dptObjectAPI = "https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds";
@@ -69,6 +70,8 @@ function DepartmentPage() {
       </nav>
 
       {renderResults(results)}
+
+      <NavBottom />
     </>
   );
 }

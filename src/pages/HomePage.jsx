@@ -5,6 +5,7 @@ import SearchForm from '../components/SearchForm';
 import PageTitle from '../components/PageTitle';
 import ErrorMessage from '../components/ErrorMessage';
 import ObjectResult from '../components/ObjectResult';
+import NavBottom from '../components/NavBottom';
 
 function Home() {
     const departmentsAPI = "https://collectionapi.metmuseum.org/public/collection/v1/departments";
@@ -53,7 +54,9 @@ function Home() {
                     mainMessage="Sorry, the museum is closed" 
                     subMessage={errorMessage}/>
                 : renderResults(results, dpts)
-            }        
+            }
+
+            <NavBottom />
         </>
     )
 }
