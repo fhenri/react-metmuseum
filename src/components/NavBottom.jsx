@@ -19,10 +19,10 @@ function NavBottom() {
     }
 
     return (
-        <div className="fixed bottom-0 left-0 z-50 w-full h-6 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+        <div className="fixed bottom-0 left-0 z-50 w-full h-8 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
             <div className="items-center justify-center text-gray-500 dark:text-gray-400 me-auto flex">
                 <CopyrightIcon />
-                <span className="p-2 text-sm">Powered by <a href="https://www.cloud06.io">cloud06.io</a></span>
+                <span className="p-2 text-sm md:text-base">Powered by <a href="https://www.cloud06.io">cloud06.io</a></span>
             </div>
         </div>
     )
