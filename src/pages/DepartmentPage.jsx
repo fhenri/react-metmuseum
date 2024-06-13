@@ -42,9 +42,9 @@ function DepartmentPage() {
   }, [departmentId]);
 
   function renderResults (results) {
-    if (errorMessage || (!isLoading && results.length == 0)) {
+    if (errorMessage || (!isLoading && (!results || results.length == 0))) {
       return (<ErrorMessage 
-        mainMessage="Sorry, the gallery is closed" 
+        mainMessage="Sorry, no object to see at the moment." 
         subMessage={errorMessage}/>)
     }
 
