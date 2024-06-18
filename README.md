@@ -24,4 +24,4 @@ Technically, this contains many features a React app would require:
 - Cache using Session Storage
 - Github Action for automatic deployment as Github pages
 - The hosted version uses the react router's `HashRouter` but would be preferable `BrowserRouter`
-- Made the help of [Tailwind css](https://tailwindcss.com/) to handle all css designs
+- Made with the help of [Tailwind css](https://tailwindcss.com/) in order to get acceptable design
